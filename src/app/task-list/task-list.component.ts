@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModelTask } from './task-model';
 
 @Component({
   selector: 'app-task-list',
@@ -7,19 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
-  id: number;
-  description: string;
-  statusName: string;
+  public taskStatusOptions = [
+    {
+      value: 'inProgress',
+      label: 'In progress'
+    },
+    {
+      value: 'pending',
+      label: 'Pending'
+    },
+    {
+      value: 'finished',
+      label: 'Finished'
+    }
+  ];
+  public task: any;
 
-  constructor() { }
-
-  ngOnInit() {
-    
+  constructor() {
+    this.task = new ModelTask();
   }
 
+  ngOnInit() {
+    this.task = [];
+    for (let i = 0; i < 10; i++) {
+      this.task.push({id: i, description: 'Description of Task ' + i, statusName: this.taskStatusOptions[(i % 3)].value});
+    }
+  }
 
-  getAllTasks() {
-    
+  getAllItems() {
+    return this.task.items;
   }
 
   addTask() {

@@ -10,6 +10,18 @@ p {
 	text-align: center;
 }
 
-#tasks_iterate {
+#tasks_elements {
 	
+}
+
+.button {
+
+	font-size:14px;
+	color:white;
+	background-color: #0066CC;
+	padding:15px 30px;
+	font-weight:bolder;
+	float:right;
+	margin-right:30px;
+	border-radius:10px;
 }

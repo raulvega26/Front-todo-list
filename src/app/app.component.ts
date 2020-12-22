@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-task-list',
-  templateUrl: './task-list/task-list.component.html',
-  styleUrls: ['./task-list/task-list.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'everis-dar-todo-list-front';
