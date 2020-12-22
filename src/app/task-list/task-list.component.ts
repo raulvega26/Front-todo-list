@@ -7,9 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent implements OnInit {
 
+  id: number;
+  description: string;
+  statusName: string;
+
   constructor() { }
 
   ngOnInit() {
+    
+  }
+
+
+  getAllTasks() {
+    
+  }
+
+  addTask() {
+
+  }
+
+  getTaskById() {
+
+  }
+
+  deleteTask() {
+
+  }
+
+  updateTask() {
+
   }
 
 }
